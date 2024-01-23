@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <!-- 테이블 태그는 표를 작성하는 태그입니다. -->
+  <table border="1px">
+    
+    <tr> <!-- tr(table row)은 table의 자식 태그로, 표의 행을 나타냅니다. -->
+      <th>이름</th> <!-- th(table head)는 첫 열에 사용된다.(ctrl+alt+방향키 누르면 커서가 확대된다. 한번에 수정하기 용이) -->
+      <th>나이</th>
+      <th>성별</th>
+      <th>주소</th>
+      <td rowspan="4" align="center"> <!-- 첫 행에서 td 값에 rowspan을 주면 세로셀 병합할 수 있다. 병합하려는 칸 수를 입력한다. -->
+        <button>세로 버튼</button>
+      </td>
+    </tr> 
+
+    <tr>
+      <td>원우진</td> <!-- td(table data)는 tr의 자식 태그로, 한 행에 들어갈 열(칸)을 나타냅니다. -->
+      <td>36</td>
+      <td>남</td>
+      <td>서울시 마포구</td>
+    </tr>
+
+    <tr>
+      <td>박선후</td>
+      <td>20</td>
+      <td>여</td>
+      <td>경기도 성남시</td>
+    </tr>
+
+    <tr> <!-- colspan으로 가로셀 병합할 수 있다. 병합하려는 칸 수를 입력한다. -->
+      <td colspan="4" align="center">
+        <button>가로 버튼</button>
+      </td>
+    </tr>
+      
+  </table>
+</body>
+</html>
