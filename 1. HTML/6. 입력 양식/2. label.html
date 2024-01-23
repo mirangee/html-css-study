@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <form action="#">
-     <!--
-            label 요소는 입력양식의 제목 역할을 합니다.
-            for라는 속성을 사용하여 입력 양식과 연결할 수 있습니다.
-            무엇을 입력해야 하는지에 대한 정보를 전달할 뿐만 아니라
-            label을 클릭함으로 input 자체에 집중할 수 있게 도와줍니다.
-        -->
-        
-    <input type="text" name="id" autocomplete="off"  placeholder="아이디">
+    <!-- 
+            label 태그는 사용자 인터페이스 항목의 설명을 나타낸다.
+            보통 input 태그와 연결하여 input에 대한 설명을 해준다.
+            input과 연결 시 이점: 사용자가 입력해야할 텍스트가 무엇인지 쉽게 이해할 수 있다.
+            관련 label을 클릭해서 input을 활성화 할 수 있다.
+    -->
+
+    <!-- 연결방법1: input 태그를 label 태그로 랩핑한다.-->
+    <input type="text" name="id" autocomplete="off" placeholder="아이디">
     <input type="password" name="pw" placeholder="비밀번호">
     <label><input type="checkbox" name="auto-login">자동 로그인</label>
 
+    <!-- 연결방법2: label의 for 속성값과 input의 id 속성값을 일치시킨다.-->
     <input type="checkbox" name="auto-login2" id="auto">
     <label for="auto">자동 로그인2</label>
   </form>
+
+    <!-- 
+      접근성 고려 사항
+      1. label 안에 a태그, button태그와 같은 인터렉티브 요소를 배치하지 말 것
+      -> label과 관련된 양식을 입력하기가 어렵다.
+
+      2. label 안에 제목 요소(h태그)를 배치하지 말 것
+      -> 제목 요소는 탐색 목적의 보조 도구로 사용되어야 한다.
+    -->
 </body>
+
 </html>

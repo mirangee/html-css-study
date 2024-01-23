@@ -7,6 +7,11 @@
 </head>
 <body>
   <form action="#">
+    <!-- 
+      select 요소를 통해 사용자에게 선택지를 제공할 수 있다.
+      option 요소와 함께 사용된다.
+      optgroup 요소를 통해 option을 그룹으로 묶어 보여줄 수 도 있다.
+    -->
     <select name="drink">
       <optgroup label="coffee">
         <option value="ame">아메리카노</option>
@@ -24,14 +29,20 @@
     <br><br><br>
     <hr>
 
-    <input type="text" list="fruits">
+    <!-- 
+      datalist는 사용자가 입력 필드에 값을 입력할 때 자동완성 기능을 제공한다.
+      option 태그와 같이 사용되며, datalist의 항목을 정의한다.
+
+      input 요소의 list 속성을 사용하여 datalist의 id를 참조하며
+      입력 필드와 연결된 옵션 목록을 만들어 사용한다.
+    -->
+    <input type="text" name="fruit" list="fruits">
     <datalist id="fruits">
       <option>사과</option>
       <option>오렌지</option>
       <option>바나나</option>
       <option>포도</option>
       <option>망고</option>
-      <option>몽키바나나</option>
     </datalist>
 
     <input type="submit" value="주문">
