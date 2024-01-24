@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    html * {
+      font-size: 10px;
+    }
+    body * {
+      border: 2px solid black; 
+    }
+
+    /* em은 내가 가진 폰트 대비 n배를 적용한다.
+      소수점도 허용한다. */
+    .container {
+      font-size: 20px;
+      width: 60em;
+    }
+
+    /* 상속 되는 속성의 경우 직속 부모의 속성값에 비례한다. */
+    .parent {
+      width: 50%;
+      font-size: 2em;  
+    }
+
+    /* rem은 html 태그(기본 폰트 사이즈는 16px임) 폰트 사이즈 대비 n배를 적용한다.
+    절대적인 기준이 필요할 때 rem을 활용한다. */
+    .child {
+      width: 30%;
+      font-size: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  나는 HTML이야
+  <div class="container">Container
+    <div class="parent">Parent
+      <div class="child">Child1</div>
+      <div class="child">Child2</div>
+    </div>
+  </div>
+</body>
+
+</html>

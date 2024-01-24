@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* display 속성에 block 속성값을 적용하면
+    인라인 요소를 block 요소로 변경할 수 있다. */
+    span {
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+
+    /* display 속성을 활용해 a태그로 버튼을 만들 수 있다.
+       inline-block 속성값을 주면 inline 특성과 block 특성을 둘 다 활용할 수 있다.*/
+    a {
+      display: inline-block;
+      width: 120px;
+      height: 30px;
+      background-color: rgb(58, 243, 120);
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+
+
+    /* display 속성에 none 속성값을 만들면
+      display를 안 보이게 적용할 수 있다.*/
+    .box {
+      height: 100px;
+      background-color: skyblue;
+      margin-top: 40px;
+    }
+
+    .box>input:nth-child(2) {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <span>display 속성 공부</span>
+
+  <a href="https://www.naver.com" target="_blank">네이버로 이동</a>
+  <a href="https://www.google.com" target="_blank">구글로 이동</a>
+
+  <div class="box">
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <input type="text" value="3">
+    <input type="text" value="4">
+    <input type="text" value="5">
+    <input type="text" value="6">
+  </div>
+</body>
+
+</html>

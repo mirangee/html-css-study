@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .parent {
+      width: 1000px;
+      height: 300px;
+      border: 4px solid blue;
+      margin: 20px;
+    }
+
+    /* max와 min으로 최대값과 최소값을 설정한다. 
+    css의 최적화 기술 중 하나이다. */
+    .child {
+      background-color: orange;
+      max-width: 400px;
+      min-height: 200px;
+    }
+
+    /* 
+    width와 max-width, min-width의 차이점
+    width는 요소의 너비를 고정된 값으로 설정하므로 작은 화면,
+    혹은 콘텐츠 크기를 조정할 때 레이아웃 문제를 발생할 수 있다.
+
+    한편, max-width, min-width를 사용하면 지정된 값보다
+    크거나(max-width), 작거나(min-width) 하지 않은 선에서
+    필요한 경우 유연하게 변화할 수 있다.
+
+    요소는 사용 가능한 공간에 맞게 크기를 조정하지만
+    지정된 최대 너비를 초과하거나 지정된 최소 너비보다 작아지지 않는다.
+    */
+    main {
+      background-color: gold;
+      padding: 1rem;
+    }
+
+    main p {
+      margin: 1rem;
+      background-color: #fff;
+      padding: 1rem;
+    }
+
+    main p:nth-child(1) {
+      width: 600px;
+    }
+
+    main p:nth-child(2) {
+      max-width: 600px;
+    }
+
+    main p:nth-child(3) {
+      min-width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <br><br>
+  <h2>화면 크기를 조절해 보면 차이가 보인다.</h2>
+  <p>첫번째는 width로, 600px 값으로 고정되어 있다.</p>
+  <p>두번째는 max-width로 최대값을 600px으로 지정했다. 화면 너비가 600px보다 커져도 더이상 커지지 않는다.</p>
+  <p>세번째는 min-width로, 최소값을 200px로 지정했다. 화면 너비를 200px보다 줄여도 더이상 줄어들지 않는다.</p>  
+
+  <main>
+    <p>
+      width에 600px을 적용했습니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+    </p>
+
+    <p>
+      max-width에 600px을 적용했습니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+    </p>
+
+    <p>
+      min-width에 600px을 적용했습니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+      안녕하세요. 연습 중입니다. 차이점을 테스트합니다. 안녕하세요. 연습 중입니다. 차이점을 테스트합니다.
+    </p>
+  </main>
+</body>
+
+</html>

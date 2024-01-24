@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      border: 10px solid black;
+
+      /* padding은 내부 요소와 경계선과의 거리를 벌리는 속성이다.
+      콘텐츠 영역의 크기는 그대로 지키고 경계선의 크기를 바깥으로 밀어내므로
+      박스의 크기가 증가할 가능성이 있다. */
+      padding: 30px;
+
+      /* 만약 박스 크기를 바꾸고 싶지 않다면 box-sizing 속성을 사용한다.
+      의 사이즈를 boder를 기준으로 결정하겠다는 의미로,
+      콘텐츠 영역의 크기가 줄어든다. */
+      /* 
+        박스의 크기를 어떤 것을 기준으로 계산할 지를 결정.
+        border-box는 테두리(경계선)를 기준으로 크기를 정하고
+        content-box(default)는 내부 요소를 기준으로 크기를 정합니다.
+        padding은 내부 요소와 경계선과의 거리를 벌리는 속성이기 때문에
+        그만큼 박스의 크기가 증가할 가능성이 있습니다.
+        */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">hello world</div>
+</body>
+</html>
