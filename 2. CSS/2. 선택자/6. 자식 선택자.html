@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      자식선택자는 >를 활용해 선택한다. 
+      직속 자식만 선택 가능하다.
+    */
+    
+    div > ul > li.orange {
+      font-weight: bold;
+    }
+
+    div > ul > li > ol{
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>안녕 안녕</h1>
+  <div>
+    <ul>
+      <li>사과
+        <ol>
+          <li>1번째</li>
+          <li class="orange">2번째</li>
+          <li>3번째</li>
+        </ol>
+      </li>
+      <li class="orange">오렌지</li>
+      <li>딸기
+        <ol>
+          <li>1번째</li>
+          <li>2번째</li>
+          <li>3번째</li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+
+  <div>당근</div>
+  <p>토마토</p>
+  <span class="orange">오렌지</span>
+</body>
+
+</html>
