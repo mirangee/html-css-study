@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 가상 선택자는 사용자가 '어떤 행동을 했을 때'(이래서 가상이라 불림) 스타일을 적용할 경우 사용한다.
+    평소에 작동하지 않다가 어떤 행동을 하면 적용된다.
+    
+    hover -> 마우스를 올리면
+    active -> 클릭을 하고 있는 동안
+    focus -> 포커싱 되어 있으면 (커서가 깜빡깜빡하면)
+    */
+    a:hover {
+      color: red;
+    }
+    
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+
+    .box:hover {
+      width: 200px;
+      transition: 0.5s;
+    }
+
+    .box:active {
+      width: 300px;
+      background-color: yellowgreen;
+    }
+
+    input {
+      width: 100px;
+      border: 1px solid gray;
+      padding: 5px 10px;
+      outline: none;
+      
+    }
+
+    input:focus {
+      width: 200px;
+      border: 2px solid rgb(255, 92, 92);
+      transition: 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <!-- 팁! div.box하면 자동으로 <div class="box"></div>가 생성된다.
+       div#box하면 자동으로 <div id="box"></div>가 생성된다.
+       다른 태그에도 적용 가능.
+  -->
+  <a href="https://www.google.com" target="_blank">Google로 이동</a>
+  
+  <div class="box"></div><br>
+
+  <input type="text">  
+</body>
+</html>
