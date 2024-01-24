@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 우선순위는 HTML 요소에 동일한 속성이 적용될 경우
+     명시도 점수에 따라 우선 적용된다. (점수표는 교안 2장-선택자 참고)
+     점수가 동일하면 마지막에 해석되는 선언이 우선한다.
+     명시도 점수는 상속보다 우선한다.
+     !important가 적용된 선언 방식이 다른 것보다 우선한다.*/
+    #i-yellow {
+      color: yellow;
+    }
+
+    .c-green {
+      color: green;
+    }
+
+    /* !important가 적용되면 명시도 점수가 무한대점이다. */
+    div {
+      color: red !important;
+      width: 200px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="i-yellow" class="c-green" style="color: orange;">hello</div>
+</body>
+</html>
