@@ -1,0 +1,9 @@
+/* 
+  다른 스타일 시트에서 또 다른 스타일을 불러올 때 import를 사용합니다.
+  굳이 html 파일에 link를 하지 않아도 된다.
+*/
+@import "./side.css";
+h1, p {
+  color: red;
+  background-color: bisque;
+}
