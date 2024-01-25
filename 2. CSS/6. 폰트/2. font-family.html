@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 
+    외부 폰트를 적용하는 세 가지 방법
+    1. 링크 사용: 폰트 제공 웹사이트에서 제공하는 link 코드를 <head> 내부에 넣는다.
+    2. 링크 사용: 폰트 제공 웹사이트에서 제공하는 import 코드를 <style> 내부에 넣는다.
+    3. 다운로드 후 사용: TTF를 다운 받고 파일 위치를 지정해 준 뒤 
+    @font-face를 사용해서 font-family 이름을 저장하고 url을 넣는다.
+   -->
+
+  <!-- 1. link 코드를 사용하는 방법(google noto font 적용)  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* 2. import 코드를 사용하는 방법(배달의 민족 주아 font 적용) */
+    @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+    /* 3. font-face 사용하는 방법(쿠키런 font 적용) */
+    @font-face {
+      font-family: 'CookieRun';
+      src: url(./fonts/CookieRun\ Regular.ttf);
+    }
+
+    /* 세상의 모든 글씨체는 이들을 바탕으로 만들어졌다! */
+
+    .font1 {
+      /* 바탕체 계열 */
+      font-family: serif;
+    }
+
+    .font2 {
+      /* 고딕체 계열 */
+      font-family: sans-serif;
+    }
+
+    .font3 {
+      /* 모노스페이스 계열: 가로폭이 동등한 글꼴 계열 */
+      font-family: monospace;
+    }
+
+    .font4 {
+      /* 필기체 계열(궁서체류) */
+      font-family: cursive;
+    }
+
+    .font5 {
+      /* 화려한 계열 */
+      font-family: fantasy;
+    }
+
+    .font6 {
+      /*
+        글씨체는 최소 두 개 써줄 것.
+        인터넷이 안 되거나 해서 1지망 글씨체가 적용 안 되는 경우에는
+        2지망 적용해 달라는 의미
+      */
+      font-family: "Jua", sans-serif;
+    }
+
+    .font7 {
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    h1 {
+      /* font-family: 'CookieRun', sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      font-style: oblique;
+      line-height: 1.4em; */
+
+      /* font: 스타일 두께 크기 / 줄높이 글꼴 */
+      /* 단축 속성 사용 시 font-size와 font-family는 필수로 지정해야 한다. */
+      font: oblique bold 30px / 1.4em 'CookieRun', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="font1">Hello world!</div>
+  <div class="font2">Hello world!</div>
+  <div class="font3">Hello world!</div>
+  <div class="font4">Hello world!</div>
+  <div class="font5">Hello world!</div>
+  <div class="font6">우리가 어떤 민족입니까</div>
+  <div class="font7">구글 노토 폰트 사용 예시</div>
+
+
+  <h1> 용감한 쿠키가 달립니다~! </h1>
+
+</body>
+
+</html>

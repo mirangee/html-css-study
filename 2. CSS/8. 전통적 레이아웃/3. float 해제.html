@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /*
+    자식 요소에 float을 적용하면 (공중에 뜨기 때문에)
+    부모 요소는 높이 값을 상실하고 영역이 쪼그라 든다.
+    이 상황을 막기 위해 3가지 방법을 취할 수 있다.
+    방법이긴 하지만 1,2번은 비권장 사항이다.
+
+    1. 부모 요소에 overflow: hidden; 적용
+    2. 빈 형제 요소를 추가하여 clear 속성 사용
+    3. 부모 요소에 가상 클래스를 추가하여 해제
+    */
+    .container {
+      width: 700px;
+      padding: 20px;
+      border: 3px solid red;
+      /* overflow: hidden; */
+      /* 1번 방법: overflow 본래 목적에 어긋나므로 비권장 */
+    }
+    
+    .box {
+      width: 200px;
+      height: 150px;
+      border: 3px solid green;
+      background-color: yellow;
+      font-size: 50px;
+      float: left;
+    }
+    
+    /* 3번 방법: clearfix에 가상클래스 사용 */
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    /* 2번 방법: html에 의미 없는 div 태그를 만들어야 하므로 비권장 */
+    /* .clear-box {
+      clear: both;
+    } */
+
+  </style>
+</head>
+<body>
+  <!--
+    3번 방법: 가장 권장하는 방식으로
+    이 경우 클래스 이름을 clearfix으로 이름을 주로 사용한다.
+    after 가상 클래스를 사용하는데 css로 가서 공식을 외워라!
+  -->
+  <div class="container clearfix">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <!-- <div class="clear-box"></div> -->
+  </div>
+</body>
+</html>

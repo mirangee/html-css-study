@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box1 {
+      width: 550px;
+      height: 350px;
+      border: 2px solid gray;
+
+      background-color: rgb(0, 255, 85);
+      background-image: url(./images/sunflower.jpg);
+
+      /*
+      background-size로 배경 이미지의 크기를 조절할 수 있다.
+      속성값 cover: 이미지 비율을 고정한 채로 영역을 채운다.
+      영역을 가득 채우지만 이미지에 안 보이는 부분이 생길 수 있다.
+      */
+
+      background-size: cover; 
+    }
+
+    .box2 {
+      width: 550px;
+      height: 350px;
+      border: 2px solid gray;
+
+      background-color: yellow;
+      background-image: url(./images/sunflower.jpg);
+
+      /*
+      background-size로 배경 이미지의 크기를 조절할 수 있다.
+      속성값 contain: 영역에 이미지가 다 포함되도록 이미지를 넣어준다. 이미지 비율과 영역 비율이 맞지 않으면 repeat된다.
+      repeat을 원치 않으면 background-repeat: no-repeat 적용하면 된다.
+      */
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .box3 {
+      width: 550px;
+      height: 350px;
+      border: 2px solid gray;
+
+      background-image: url(./images/sunflower.jpg);
+      background-size: 200px;
+      background-repeat: no-repeat;
+
+      /* background-position으로 이미지의 위치를 조절한다.
+      
+        %, px, em으로 지정이 가능
+        가로축과 세로축을 한번에 지정 가능
+        가로축만 사용하면 세로축은 가운데 정렬
+        % -> 왼쪽 상단 0% 0%, 오른쪽 하단이 100% 100%
+        방향 -> top, bottom, left, right, center
+      */
+      background-position: 70% 30%; 
+      /*왼쪽 상단점을 기준으로 x축 방향으로 70%, y축 방향으로 30% 떨어진 위치*/
+    }
+
+    .box4 {
+      width: 550px;
+      height: 350px;
+      border: 2px solid gray;
+
+      /* 단축 속성으로 작성 가능 */
+      background: yellow url(./images/sunflower.jpg) no-repeat bottom;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="box4"></div>
+  
+</body>
+</html>
