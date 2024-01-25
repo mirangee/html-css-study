@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent {
+      width: 300px;
+      height: 250px;
+      border: 4px solid black;
+
+      /* 
+      overflow 속성으로 부모 요소의 크기보다 자식 요소의 크기가 커졌을 때 
+      넘치는 부분을 어떻게 처리할 것인지 조절할 수 있다.
+      속성값: visible(보여줌), hidden(가림),
+      scroll(항상 스크롤 만듦), auto(넘치면 스크롤 만듦)
+      */
+      overflow: scroll;
+    }
+
+    .child {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border: 4px solid orange;
+      font-size: 40px;
+    }
+
+    .tx1 {
+      border: 1px solid #777;
+      width: 300px;
+      height: 300px;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+  </div>
+
+  <hr>
+  <!--
+    더미 텍스트(단어지만 의미 없는 문장 텍스트)를 만들어주는 웹사이트 lorem Ipsum
+    https://www.lipsum.com/
+   -->
+  <p class="tx1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus mollis lacus sit amet varius. Praesent
+    purus ante, eleifend vitae erat fringilla, aliquet fringilla eros. Curabitur tempus faucibus lacus, sed vestibulum
+    neque posuere eu. Pellentesque magna ligula, volutpat et nulla vulputate, interdum maximus risus. Sed euismod a enim
+    a posuere. Fusce sit amet diam a nisi pulvinar gravida et quis urna. Mauris sed bibendum nulla. Mauris imperdiet
+    commodo leo, at commodo tortor ultricies in. Cras mi ipsum, pulvinar eu lacinia eget, auctor eu magna. Sed sed
+    turpis ante. Pellentesque urna metus, maximus vitae justo quis, convallis fringilla nunc.
+
+    Nullam rutrum at eros sed elementum. Ut vitae ipsum porttitor, iaculis metus a, pharetra nulla. Sed eget
+    sollicitudin nisi. Cras vitae metus pretium augue eleifend pulvinar sodales a magna. Duis et sagittis ex. Cras sit
+    amet molestie lectus. Cras ultricies consectetur semper. Curabitur id libero ullamcorper mi suscipit efficitur a a
+    magna. Praesent interdum ex lacus, non scelerisque est gravida id. Donec condimentum ultrices nibh, quis porta nibh
+    malesuada sed. Pellentesque euismod consequat mattis.
+
+    Nulla faucibus leo vitae lacus eleifend, ac faucibus leo tempor. Aliquam nunc odio, lobortis in pretium at, blandit
+    vel nunc. Etiam ut sollicitudin diam. Duis et lorem id dolor ornare condimentum scelerisque quis leo. Vestibulum nec
+    dictum lorem. Sed rhoncus pulvinar odio, non laoreet sem eleifend vel. Vestibulum blandit congue gravida.
+
+    Curabitur vel purus eget sem efficitur efficitur efficitur non enim. Phasellus pellentesque, enim quis semper
+    vestibulum, mauris quam iaculis ante, eu iaculis diam nisi facilisis arcu. Donec pharetra nibh sed metus
+    condimentum, sit amet vestibulum dui tempor. Donec vel libero scelerisque, elementum magna ac, sodales quam. Quisque
+    eget tristique lectus, a blandit lectus. Vivamus eget urna id ante vulputate luctus vitae in orci. Nam a suscipit
+    urna. Vestibulum pulvinar sapien et faucibus tempor. Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas. Sed venenatis lorem nec ornare sodales. Cras non mauris eu risus luctus
+    tincidunt. Curabitur scelerisque est sit amet nisi blandit venenatis. Nunc pharetra purus enim, ut mollis felis
+    semper ac.
+
+    Quisque sodales ex et arcu tempor, ac facilisis quam auctor. Donec sit amet velit metus. Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit. Curabitur bibendum dapibus interdum. Vestibulum sollicitudin neque nec elit molestie,
+    sit amet efficitur mi vehicula. In cursus leo sit amet consequat pulvinar. Aliquam ullamcorper nunc felis, gravida
+    convallis eros interdum nec. Sed ligula turpis, blandit quis bibendum at, molestie sit amet ante.
+  </p>
+</body>
+
+</html>
