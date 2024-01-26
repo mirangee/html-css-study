@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      border-radius: 10px;
+      margin: 30px;
+
+      animation: move 3s linear 2s infinite normal;
+
+      /*
+      animation-fill-mode 요소의 애니메이션 전후 위치를 설정한다.
+      none: 기존 위치에서 시작하고 종료
+      forwards: 기존 위치에서 시작하고 애니메이션 위치에서 종료
+      backwards: 애니메이션 위치에서 시작하고 기존 위치에서 종료
+      both: 애니메이션 시작 위치에서 시작하고 종료
+      */
+      animation-fill-mode: both;
+    } 
+
+    @keyframes move {
+      0% {
+        transform: translate(0,0);
+      }
+
+      25% {
+        transform: translate(100px,0);
+      }
+
+      50%{
+        transform: translate(100px,100px);
+      }
+
+      75% {
+        transform: translate(0,100px);
+      }
+
+      100% {
+        transform: translate(0,0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

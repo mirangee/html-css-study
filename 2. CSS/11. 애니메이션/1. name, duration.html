@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+
+    .box1:hover {
+      animation-name: grow-up;
+      animation-duration: 3s; /*애니메이션 지속 시간*/
+      animation-iteration-count: infinite; /*애니메이션 반복횟수*/
+      animation-timing-function: ease-in-out;
+      animation-delay: 0.5s;
+      
+      /*
+       animation-direction으로 애니메이션이 반복되는 keyframes의 방향 설정
+       normal(기본값) : 0% -> 50% -> 100%
+       reverse : 100% -> 50% -> 0%
+       alternate : 정방향으로 왕복
+       alternate-reverse : 역방향으로 왕복
+      */
+      animation-direction: alternate; 
+    }
+
+    @keyframes grow-up {
+      0% {
+        width: 100px;
+      }
+      50% {
+        width: 500px;
+      }
+      100% {
+        width: 300px;
+      }
+    }
+
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(128, 0, 122);
+      margin-top: 50px;
+    }
+
+    .box2:hover {
+
+      /* 단축 속성
+      animation: 이름 지속시간 [타이밍함수 대기시간 반복횟수 반복방향 전후위치]; */
+      animation: grow-up 3s ease 0s infinite alternate;
+    }
+
+    @keyframes grow-up {
+      0% {
+        width: 100px;
+      }
+      50% {
+        width: 500px;
+      }
+      100% {
+        width: 300px;
+      }
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+</html>
