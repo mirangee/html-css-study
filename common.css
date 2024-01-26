@@ -12,8 +12,11 @@
 /* 기본 폰트로 사용할 것도 import */
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+* {
+  }
 body {
   font-size: 18px;
+  
 }
 
 a {

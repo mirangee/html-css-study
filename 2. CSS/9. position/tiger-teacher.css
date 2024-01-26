@@ -1,0 +1,92 @@
+@import url(../../common.css);
+
+
+/* base style */
+body {
+  background-color: #666;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #333;
+  font-family: '굴림', 'Gulim', serif;
+}
+
+#wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* header style */
+header {
+  background-color: #123456;
+  padding: 10px;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #cc0;
+  text-align: center;
+  font-family: 'jua', cursive;
+}
+
+header h1 strong {
+  font-size: 3em;
+  color: #fff;
+}
+
+header h1 span {
+  font-size: 1.5em;
+}
+
+header h1 em {
+  font-size: 2em;
+  color: #ccc;
+}
+
+/* container style */
+.container {
+  background-color: #ccc;
+}
+
+.container .menu {
+  float: left;
+  width: 20%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container .menu li {
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+
+.container .content {
+  background-color: #fff;
+  width: 80%;
+  float: right;
+}
+
+.container .content h2 {
+  background-color: #800;
+  color: yellow;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px 20px;
+  font-family: '궁서', cursive;
+}
+
+.container .content p {
+  padding: 20px;
+  text-align: justify;
+}
+
+/* footer style */
+footer {
+  background-color: #aaa;
+  padding: 10px 20px;
+}
+
+footer address {
+  color: #000;
+}
