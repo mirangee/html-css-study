@@ -2,6 +2,7 @@
 
 #wrapper {
   width: 50%;
+  max-width: 800px;
   background-color: yellow;
   margin: 0 auto;
 }
@@ -38,7 +39,7 @@ header h1 em {
 }
 
 .container .menu {
-  width: 30%;
+  width: 20%;
   text-decoration: underline;
   line-height: 24px;
   float: left;
@@ -47,7 +48,7 @@ header h1 em {
 }
 
 .container .content {
-  width: 70%;
+  width: 80%;
   background-color: #fff;
   float: right;
 }
