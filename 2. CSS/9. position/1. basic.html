@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 400px;
+      height: 300px;
+      border: 4px dashed lightgray;
+      margin: 100px auto;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      background-color: red;
+      border: 4px dashed orange;
+
+      /* relative는 요소 자신을 기준으로 배치 */
+      position: relative;
+
+      /*
+        right은 요소의 오른쪽을 기준으로 300px 이동하라는 뜻
+        (right이니까 오른쪽으로 이동할 거라 기대할 수 있지만
+        반대로 움직인다.) right, left, top, bottom 모두 그러하다.
+      */
+      
+      right: 300px;
+      /* bottom: 150px; */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+    </div>
+  </div>
+</body>
+</html>

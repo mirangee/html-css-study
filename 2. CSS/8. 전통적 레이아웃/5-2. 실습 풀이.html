@@ -8,6 +8,106 @@
   <!-- reset css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <style>
+    section {
+      width: 800px;
+      border: 3px double #123456;
+      margin: 20px auto 0;
+      color: #333;
+    }
+
+    section h1 {
+      font: bold 42px cursive, sans-serif;
+      background-color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section .intro {
+      font-size: 18px;
+      background-color: #464141;
+      color: #fff;
+      border-bottom: 3px solid gray;
+      text-align: center;
+      padding: 10px;
+    }
+
+    section .intro em {
+      color: yellow;
+      font-size: 1.1em;
+    }
+
+    section .gallery {
+      background-color: #626a6a;
+      padding: 20px 0;
+    }
+
+    section .gallery li {
+      width: 23.75%;
+      height: 330px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      float: left;
+      box-sizing: border-box;
+      margin-right: 1%;
+    }
+
+    .gallery li div {
+      height: 150px;
+      border: 1px solid lightgray;
+      background-color: #fff;
+    }
+
+    .gallery li p {
+      margin-top: 20px;
+      padding: 0 10px;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.3em;
+      color: #000;
+    }
+
+    #tulip {
+      margin-left: 1%;
+      background-color: rgb(231, 17, 17);
+    }
+
+    #tulip .pic {
+      background-image: url(./images/tulip.jpg);
+      background-size: cover;
+      background-position:20%;
+      background-repeat: no-repeat;
+    }
+
+    #jebi {
+      background-color: violet;
+    }
+
+    #jebi .pic {
+      background: url(./images/jebi.jpg) no-repeat 50% / cover;
+    }
+
+    #hobak {
+      background-color: #fe692b;
+    }
+
+    #hobak .pic {
+      background: url(./images/hobak.jpg) no-repeat 30% / cover;
+    }
+
+    #sunflower {
+      background-color: yellow;
+    }
+
+    #sunflower .pic {
+      background: url(./images/sunflower.jpg) no-repeat center/ cover;
+    }
+
+    /* float 해체용 */
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
 
   </style>
 </head>
@@ -18,8 +118,8 @@
     <p class="intro">
       사람들은 아마 자신에게 <em>자신감을 북돋워 주는</em> 표정 있는 꽃들을 선호할 것이다.
     </p>
-    <ul class="gallery">
-      <li id="tullip">
+    <ul class="gallery clearfix">
+      <li id="tulip">
         <div class="pic"></div>
         <p>너무 화려하지 않으며 고귀한 느낌을 가지고 있다.
           붉은 색이 단연 으뜸이며 한 송이만 있어도 빼어나다.</p>

@@ -7,6 +7,18 @@
   <title>Document</title>
 
   <style>
+    /*
+      nth-child와 nth-of-type
+      nth-child(n)은 부모 엘리먼트의 모든 자식 엘리먼트 중 n번째
+      nth-of-type(n)은 부모 엘리먼트의 특정 자식 엘리먼트 중 n번째
+
+      예) div:nth-child(3) 
+          -> 해당 div 요소의 부모 엘리먼트의 '모든' 자식 중 3번째 엘리먼트를 지목한다.
+             하지만 그 엘리먼트가 div 요소가 아니라면 지목되지 않는다.
+          div:nth-of-type(3)
+          -> 해당 div 요소의 부모 엘리먼트의 'div' 자식 중 3번째 엘리먼트를 지목한다.
+    */
+
     /* n번째 자식 태그를 지목할 때 :nth-child(몇 번째인지 숫자 입력)를 사용한다. */
     .fruits > li:nth-child(3) {
       color: orange;
@@ -49,17 +61,6 @@
       list-style: none;
     }
 
-    /*
-      심화: nth-child와 nth-of-type의 차이점
-      nth-child(n)은 부모 엘리먼트의 모든 자식 엘리먼트 중 n번째
-      nth-of-type(n)은 부모 엘리먼트의 특정 자식 엘리먼트 중 n번째
-
-      예) div:nth-child(3) 
-          -> 해당 div 요소의 부모 엘리먼트의 '모든' 자식 중 3번째 엘리먼트를 지목한다.
-             하지만 그 엘리먼트가 div 요소가 아니라면 지목되지 않는다.
-          div:nth-of-type(3)
-          -> 해당 div 요소의 부모 엘리먼트의 'div' 자식 중 3번째 엘리먼트를 지목한다.
-    */
   </style>
 </head>
 
