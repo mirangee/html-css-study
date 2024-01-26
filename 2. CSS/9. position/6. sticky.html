@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 400px;
+      height: 500px;
+      border: 4px solid red;
+      margin: 50px;
+      overflow: auto;
+    }
+
+    .container section {
+      height: 200px;
+      border: 4px dashed lightslategray;
+    }
+
+    section h1 {
+      text-align: center;
+      line-height: 2px;
+      
+      /* 
+            sticky 속성은 top, bottom, right, left 중에 하나를
+            필수로 설정해야 합니다. (기준을 잡아줘야 합니다.)
+            설정한 위치에 도달하기 전 까지는 static처럼 동작하다가
+            설정한 위치에 도달하면 스크롤 영역 내에서 fixed처럼
+            동작합니다.
+      */
+      position: sticky;
+      top: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section>
+      <h1>타이틀1</h1>
+    </section>
+    <section>
+      <h1>타이틀2</h1>
+    </section>
+    <section>
+      <h1>타이틀3</h1>
+    </section>
+    <section>
+      <h1>타이틀4</h1>
+    </section>
+    <section>
+      <h1>타이틀5</h1>
+    </section>
+    <section>
+      <h1>타이틀6</h1>
+    </section>
+    <section>
+      <h1>타이틀7</h1>
+    </section>
+    <section>
+      <h1>타이틀8</h1>
+    </section>
+  </div>
+</body>
+</html>

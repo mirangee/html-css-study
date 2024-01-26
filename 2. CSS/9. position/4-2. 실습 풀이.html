@@ -8,16 +8,46 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <style>
     article {
-      width: 500px;
-      height: 300px;
-      border: 4px solid lightgray;
-      margin: 50px auto 0;
+      width: 300px;
       background-color: pink;
+      border: 2px solid lightgray;
+      padding: 10px;
+      margin: 30px auto 0;
+      position: relative;
     }
 
-    h1 {
-
+    article h1 {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: green;
+      margin-bottom: 15px;
     }
+
+    article .content {
+      padding-left: 10px;
+    }
+
+    article .content li {
+      margin-bottom: 5px;
+    }
+
+    article .content li a {
+      color: #666;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+    article .content li a:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    article .more {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
   </style>
 </head>
 <body>

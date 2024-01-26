@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      margin-right: -30px;
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      border: 4px dashed black;
+      font-size: 30px;
+      float: left;
+    }
+
+    /* 요소 쌓임 순서(stack order)
+      - position 속성이 있으면 가장 위에 쌓임(static 제외)
+      - z-index 속성의 숫자값이 높을 수록 위에 쌓임
+      - z-index 숫자값이 같다면 나중에 작성한 요소일 수록 위에 쌓임
+    */
+    .box1 {
+      background-color: tomato;
+      z-index: 0;
+    }
+
+    .box2 {
+      background-color: aqua;
+      z-index: -200;
+    }
+
+    .box3 {
+      background-color: violet;
+      z-index: 100;
+    }
+
+    .box4 {
+      background-color: yellow;
+      z-index: 10;
+    }
+
+    .box5 {
+      background-color: green;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+  </div>
+</body>
+</html>
