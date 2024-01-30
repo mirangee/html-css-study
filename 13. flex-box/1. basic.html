@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: fit-content;
+      border: 5px solid #fa1e1e;
+      padding: 20px;
+      /* 아이템을 품고 있는 요소에
+      display flex를 주면 가로 정렬된다. */
+      display: flex;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #000;
+    }
+
+    .container2, .container3 {
+      /* 
+      display inline-flex 겉에 있는 container에 인라인 성격을 주고
+      안 쪽 아이템은 가로 정렬한다.
+      container들도 가로 정렬하고 싶으면 쓴다.
+      */
+      display: inline-flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <div class="container2">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <div class="container3">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</body>
+</html>

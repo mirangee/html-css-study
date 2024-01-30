@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 470px;
+      border: 4px solid #000;
+      /* flex-direction으로 정렬 방향을 정할 수 있다. */
+      display: flex;
+      /* 
+      flex-direction: row; 가로 정렬 (가로축이 주축이 됨)
+      flex-direction: row-reverse; 가로 역정렬
+      flex-direction: column; 세로 정렬 (세로축이 주축이 됨)
+      flex-direction: column-reverse; 세로 역정렬
+      */
+      flex-direction: row;
+      
+      /*
+      flex-wrap으로 아이템의 줄 바꿈을 설정
+      nowrap(기본값) : 자식 item을 줄여서라도 container 가로폭에 맞혀 정렬한다. 
+      wrap : container의 가로폭에 아이템이 최대 들어갈 수 있는 갯수가 2개이므로 2,2,1로 배치된다.
+      wrap-reverse : 역방향으로 정렬
+      */
+      /* flex-wrap: wrap;  */
+
+      /* 단축 속성 : direction wrap 한번에 설정 가능 */
+      flex-flow: row wrap;
+    }
+
+    .item {
+      width: 150px;
+      height: 100px;
+      background-color: red;
+      border: 4px dashed orange;
+      border-radius: 10px;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+  </div>
+</body>
+</html>
